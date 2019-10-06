@@ -1,0 +1,18 @@
+type SimpleUser {
+    id: ID!
+    name: String!
+    address: String
+}
+
+input AddUserInput {
+    name: String!
+    address: String
+}
+
+type Query {
+    findUserById(ID: ID!) : SimpleUser
+}
+
+type Mutation {
+    addUser(input: AddUserInput): SimpleUser
+}
