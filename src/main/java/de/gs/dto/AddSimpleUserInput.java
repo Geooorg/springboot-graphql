@@ -1,16 +1,13 @@
 package de.gs.dto;
 
+import lombok.*;
+
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AddSimpleUserInput {
 
-    public String name;
-    public String address;
-
-    public AddSimpleUserInput(String name) {
-        this.name = name;
-    }
-
-    public AddSimpleUserInput(String name, String address) {
-        this.name = name;
-        this.address = address;
-    }
+    private String name;
+    private String address;
 }

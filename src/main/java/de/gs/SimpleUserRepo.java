@@ -13,7 +13,7 @@ public class SimpleUserRepo {
     private Map<String, SimpleUser> repo = new HashMap<>();
 
     public SimpleUser addSimpleUser(AddSimpleUserInput input) {
-        SimpleUser user = new SimpleUser(input.name, input.address);
+        SimpleUser user = new SimpleUser(input.getName(), input.getAddress());
         repo.put(user.getId(), user);
         return user;
     }

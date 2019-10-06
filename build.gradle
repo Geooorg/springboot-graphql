@@ -34,6 +34,9 @@ dependencies {
     compile group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib:1.3.50"
 
+    // Lombok
+    annotationProcessor("org.projectlombok:lombok:1.18.8")
+    compileOnly("org.projectlombok:lombok:1.18.8")
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

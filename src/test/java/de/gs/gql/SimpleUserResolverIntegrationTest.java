@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SimpleUserResolverTest {
+public class SimpleUserResolverIntegrationTest {
 
     @Autowired
     SimpleQueryResolver queryResolver;
