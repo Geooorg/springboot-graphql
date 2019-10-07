@@ -11,7 +11,7 @@ plugins {
     id 'java'
     id 'war'
     id 'com.gradle.build-scan' version '2.0.2'
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'org.springframework.boot' version '2.1.9.RELEASE'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
 }
 
@@ -24,8 +24,20 @@ repositories {
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-dependencies:2.1.8.RELEASE"
+    implementation "org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // see https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/
+    components {
+        withModule('org.springframework:spring-beans') {
+            allVariants {
+                withDependencyConstraints {
+                    // Need to patch constraints because snakeyaml is an optional dependency
+                    it.findAll { it.name == 'snakeyaml' }.each { it.version { strictly '1.19' } }
+                }
+            }
+        }
+    }
 
     // GraphQL
     compile group: 'com.graphql-java-kickstart', name: 'graphiql-spring-boot-starter', version: '5.10.0'
