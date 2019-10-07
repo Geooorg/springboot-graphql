@@ -1,8 +1,12 @@
 # springboot-graphql
-Simple GraphQL project with SpringBoot 2.1.8.
+This project features a very simple GraphQL project using SpringBoot 2.1.9. 
+Users can be added and retrieved using a GraphQL mutation and query. 
+GraphiQL,  a nice browser UI, is included.
 
-The server is started on port 7777.
-Start the application and try to emit your first GraphQL user by using GraphiQL, a nice browser UI:
+## How to start
+Start the application named Application.java in your favorite IDE.
+The HTTP server is started on port 7777.
+Try out your first GraphQL user by using GraphiQL:
 
 http://localhost:7777/graphiql
 
