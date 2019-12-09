@@ -11,20 +11,18 @@ plugins {
     id 'java'
     id 'war'
     id 'com.gradle.build-scan' version '2.0.2'
-    id 'org.springframework.boot' version '2.1.9.RELEASE'
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
 }
 
 repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }
     jcenter()
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"
+    implementation "org.springframework.boot:spring-boot-dependencies:2.2.2.RELEASE"
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // see https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/

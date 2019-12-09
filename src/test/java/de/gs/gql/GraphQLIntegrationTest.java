@@ -22,16 +22,16 @@ import static org.junit.Assert.assertThat;
 public class GraphQLIntegrationTest {
 
     @LocalServerPort
-    int port;
+    private int port;
 
-    String host = "http://localhost";
+    private String host = "http://localhost";
     @Value("${graphql.servlet.mapping}")
-    String gqlPath;
+    private String gqlPath;
 
-    String graphQLUrl;
+    private String graphQLUrl;
 
     @Autowired
-    SimpleUserRepo userRepo;
+    private SimpleUserRepo userRepo;
 
     @Before
     public void beforeSetup() {

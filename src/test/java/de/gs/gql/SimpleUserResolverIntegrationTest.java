@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
 public class SimpleUserResolverIntegrationTest {
 
     @Autowired
-    SimpleQueryResolver queryResolver;
+    private  SimpleQueryResolver queryResolver;
     @Autowired
-    SimpleMutationResolver mutationResolver;
+    private SimpleMutationResolver mutationResolver;
 
     @Test
     public void canAddAndRetrieveUser() {
